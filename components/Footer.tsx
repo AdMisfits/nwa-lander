@@ -7,29 +7,13 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 mb-10">
           <div className="col-span-2">
             <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center">
-                <svg
-                  className="w-5 h-5 text-white"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M5 14c3-4 5-3 7-6s5-3 7 1"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M5 18c3-4 5-3 7-6s5-3 7 1"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    opacity="0.4"
-                  />
-                </svg>
-              </div>
-              <span className="text-base font-semibold text-white tracking-tight">
-                National Water Alliance
+              <img
+                src="/logo.png"
+                alt={`${LOCATION.city} Water Alliance`}
+                className="h-10 w-auto"
+              />
+              <span className="text-base font-semibold text-white tracking-tight leading-tight">
+                {LOCATION.city} Water Alliance
               </span>
             </div>
             <p className="text-slate-400 text-sm max-w-sm mb-5 leading-relaxed">
