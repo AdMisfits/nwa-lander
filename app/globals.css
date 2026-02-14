@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Navbar ---- */
+.nav-scrolled {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* ---- FAQ Accordion ---- */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding-bottom 0.35s ease;
+}
+.faq-item.open .faq-answer {
+  max-height: 500px;
+  padding-bottom: 20px;
+}
+.faq-chevron {
+  transition: transform 0.25s ease;
+}
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+/* ---- Tab active state ---- */
+.tab-active {
+  color: #0f172a !important;
+  border-color: #2563eb !important;
+}
+
+/* ---- Form focus ---- */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* ---- Selection color ---- */
+::selection {
+  background: rgba(37, 99, 235, 0.15);
+  color: inherit;
+}
+
+/* ---- Premium card shadows ---- */
+.card-elevated {
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.card-elevated:hover {
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.06),
+    0 12px 32px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ---- Glass card ---- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ---- Gradient text ---- */
+.gradient-text {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- Wave divider ---- */
+.wave-divider {
+  position: relative;
+}
+.wave-divider::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60'%3E%3Cpath fill='%23f8fafc' d='M0,32L80,37.3C160,43,320,53,480,53.3C640,53,800,43,960,37.3C1120,32,1280,32,1360,32L1440,32L1440,60L1360,60C1280,60,1120,60,960,60C800,60,640,60,480,60C320,60,160,60,80,60L0,60Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom;
+  background-size: cover;
+}
+
+/* ---- Scrollbar hide ---- */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ---- Subtle pattern background ---- */
+.pattern-bg {
+  background-image: radial-gradient(circle at 1px 1px, rgba(37, 99, 235, 0.04) 1px, transparent 0);
+  background-size: 32px 32px;
+}
