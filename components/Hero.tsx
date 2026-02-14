@@ -8,7 +8,7 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=1600&h=900&fit=crop&q=80')",
+            "url('https://images.pexels.com/photos/7162042/pexels-photo-7162042.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop')",
         }}
       />
       {/* Gradient overlay */}
