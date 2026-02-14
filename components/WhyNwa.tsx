@@ -41,22 +41,22 @@ const reasons = [
 
 export default function WhyNwa() {
   return (
-    <section className="bg-white py-20 sm:py-28 px-4">
+    <section className="bg-white py-14 sm:py-28 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <p className="text-brand-600 text-sm font-medium tracking-wider uppercase mb-3">
             Why NWA
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-900 leading-tight mb-4">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-normal text-slate-900 leading-tight mb-4">
             Why families choose NWA
           </h2>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 text-base sm:text-lg max-w-2xl mx-auto">
             Dedicated to improving lives by providing access to safer,
             better-tasting, and more sustainable water.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {reasons.map((reason, i) => (
             <div
               key={i}

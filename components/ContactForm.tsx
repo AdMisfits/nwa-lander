@@ -28,7 +28,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="bg-white py-20 sm:py-24 px-4">
+    <section id="contact" className="bg-white py-14 sm:py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-5 gap-16">
           <div className="lg:col-span-2">
@@ -73,27 +73,27 @@ export default function ContactForm() {
           <div className="lg:col-span-3">
             {/* Step indicator */}
             <div className="flex items-center gap-0 mb-8">
-              <div className="flex items-center gap-2">
-                <span className="w-8 h-8 bg-brand-600 text-white rounded-full flex items-center justify-center text-sm font-semibold shadow-lg shadow-brand-600/20">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <span className="w-7 h-7 sm:w-8 sm:h-8 bg-brand-600 text-white rounded-full flex items-center justify-center text-xs sm:text-sm font-semibold shadow-lg shadow-brand-600/20">
                   1
                 </span>
-                <span className="text-sm font-medium text-slate-900">
+                <span className="hidden sm:inline text-sm font-medium text-slate-900">
                   Information
                 </span>
               </div>
-              <div className="flex-1 h-px bg-slate-200 mx-4" />
-              <div className="flex items-center gap-2">
-                <span className="w-8 h-8 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center text-sm font-semibold">
+              <div className="flex-1 h-px bg-slate-200 mx-2 sm:mx-4" />
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <span className="w-7 h-7 sm:w-8 sm:h-8 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center text-xs sm:text-sm font-semibold">
                   2
                 </span>
-                <span className="text-sm text-slate-400">Appointment</span>
+                <span className="hidden sm:inline text-sm text-slate-400">Appointment</span>
               </div>
-              <div className="flex-1 h-px bg-slate-200 mx-4" />
-              <div className="flex items-center gap-2">
-                <span className="w-8 h-8 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center text-sm font-semibold">
+              <div className="flex-1 h-px bg-slate-200 mx-2 sm:mx-4" />
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <span className="w-7 h-7 sm:w-8 sm:h-8 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center text-xs sm:text-sm font-semibold">
                   3
                 </span>
-                <span className="text-sm text-slate-400">Confirmation</span>
+                <span className="hidden sm:inline text-sm text-slate-400">Confirmation</span>
               </div>
             </div>
 

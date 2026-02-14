@@ -34,7 +34,7 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="bg-white py-20 sm:py-24 px-4">
+    <section id="faq" className="bg-white py-14 sm:py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-14">
           <p className="text-brand-600 text-sm font-medium tracking-wider uppercase mb-3">
@@ -53,7 +53,7 @@ export default function Faq() {
               onClick={() => setOpenIndex(openIndex === i ? null : i)}
             >
               <div className="flex items-center justify-between">
-                <span className="text-lg font-medium text-slate-900 pr-8">
+                <span className="text-base sm:text-lg font-medium text-slate-900 pr-4 sm:pr-8">
                   {faq.q}
                 </span>
                 <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0">

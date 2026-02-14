@@ -2,7 +2,7 @@ import { LOCATION } from "@/lib/config";
 
 export default function Hero() {
   return (
-    <section className="bg-navy-950 py-24 sm:py-32 lg:py-36 px-4">
+    <section className="bg-navy-950 py-16 sm:py-28 lg:py-36 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 mb-8 border border-white/10">
           <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -11,7 +11,7 @@ export default function Hero() {
           </span>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-white leading-[1.15] tracking-tight mb-6">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-normal text-white leading-[1.15] tracking-tight mb-6">
           Cleaner, safer water for your{" "}
           <span className="text-brand-400">{LOCATION.city}</span> home
         </h1>
@@ -64,20 +64,18 @@ export default function Hero() {
         </div>
 
         {/* Trust stats */}
-        <div className="flex flex-wrap justify-center gap-10 sm:gap-16">
+        <div className="grid grid-cols-3 gap-4 sm:gap-12 max-w-lg sm:max-w-none mx-auto">
           <div>
-            <p className="text-2xl sm:text-3xl font-light text-white">100%</p>
-            <p className="text-sm text-slate-500">Satisfaction guarantee</p>
+            <p className="text-xl sm:text-3xl font-light text-white">100%</p>
+            <p className="text-xs sm:text-sm text-slate-500">Satisfaction guarantee</p>
           </div>
-          <div className="w-px bg-white/10 hidden sm:block" />
-          <div>
-            <p className="text-2xl sm:text-3xl font-light text-white">24/7</p>
-            <p className="text-sm text-slate-500">Emergency service</p>
+          <div className="border-l border-white/10 pl-4 sm:pl-12">
+            <p className="text-xl sm:text-3xl font-light text-white">24/7</p>
+            <p className="text-xs sm:text-sm text-slate-500">Emergency service</p>
           </div>
-          <div className="w-px bg-white/10 hidden sm:block" />
-          <div>
-            <p className="text-2xl sm:text-3xl font-light text-white">Same-Day</p>
-            <p className="text-sm text-slate-500">Appointments available</p>
+          <div className="border-l border-white/10 pl-4 sm:pl-12">
+            <p className="text-xl sm:text-3xl font-light text-white">Same-Day</p>
+            <p className="text-xs sm:text-sm text-slate-500">Appointments available</p>
           </div>
         </div>
       </div>

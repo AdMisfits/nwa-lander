@@ -2,7 +2,7 @@ import { LOCATION } from "@/lib/config";
 
 export default function ContactInfo() {
   return (
-    <section id="contact-info" className="bg-slate-50 py-20 sm:py-24 px-4">
+    <section id="contact-info" className="bg-slate-50 py-14 sm:py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
@@ -113,7 +113,7 @@ export default function ContactInfo() {
           <h3 className="text-lg font-semibold text-slate-900 mb-6">
             Service areas near {LOCATION.city}
           </h3>
-          <div className="grid sm:grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {LOCATION.serviceArea.map((city) => (
               <div
                 key={city}

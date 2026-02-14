@@ -17,7 +17,7 @@ const offers = [
 
 export default function Promotions() {
   return (
-    <section className="relative overflow-hidden py-20 sm:py-24">
+    <section className="relative overflow-hidden py-14 sm:py-24">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-brand-700 via-brand-600 to-brand-800" />
       {/* Subtle pattern overlay */}
@@ -27,16 +27,16 @@ export default function Promotions() {
       }} />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
+        <div className="text-center mb-10 sm:mb-14">
           <p className="text-brand-200 text-sm font-medium tracking-wider uppercase mb-3">
             Limited-Time Offers
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight">
             Exclusive promotions in {LOCATION.city}
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-3 gap-6 mb-10">
+        <div className="grid sm:grid-cols-3 gap-4 sm:gap-6 mb-10">
           {offers.map((offer, i) => (
             <div
               key={i}

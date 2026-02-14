@@ -25,18 +25,18 @@ const products = [
 
 export default function Products() {
   return (
-    <section id="services" className="bg-slate-50 pattern-bg py-20 sm:py-24 px-4">
+    <section id="services" className="bg-slate-50 pattern-bg py-14 sm:py-24 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-14">
+        <div className="text-center mb-10 sm:mb-14">
           <p className="text-brand-600 text-sm font-medium tracking-wider uppercase mb-3">
             Our Solutions
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-900 leading-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-normal text-slate-900 leading-tight">
             Products &amp; services in {LOCATION.city}
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {products.map((product, i) => (
             <a key={i} href="#contact" className="group block">
               <div className="card-elevated bg-white rounded-2xl overflow-hidden">

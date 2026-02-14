@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const reviews = [
   {
@@ -42,18 +42,41 @@ function Stars() {
   );
 }
 
+function ReviewCard({ review }: { review: (typeof reviews)[number] }) {
+  return (
+    <div className="card-elevated bg-white rounded-2xl p-6 sm:p-8 border border-slate-100 snap-start">
+      <Stars />
+      <h4 className="text-lg sm:text-xl font-semibold text-slate-900 leading-snug mt-4 mb-3">
+        &ldquo;{review.quote}&rdquo;
+      </h4>
+      <p className="text-slate-500 text-sm leading-relaxed mb-5">
+        {review.body}
+      </p>
+      <div className="flex items-center gap-3">
+        <div className="w-9 h-9 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 text-sm font-bold">
+          {review.name.charAt(0)}
+        </div>
+        <span className="text-sm font-medium text-slate-700">
+          {review.name}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 export default function Reviews() {
   const [pos, setPos] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section id="reviews" className="bg-slate-50 py-20 sm:py-24 px-4">
+    <section id="reviews" className="bg-slate-50 py-14 sm:py-24 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-end justify-between mb-12">
+        <div className="flex items-end justify-between mb-8 sm:mb-12">
           <div>
             <p className="text-brand-600 text-sm font-medium tracking-wider uppercase mb-3">
               Testimonials
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-900">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-normal text-slate-900">
               Ratings &amp; reviews
             </h2>
           </div>
@@ -66,18 +89,8 @@ export default function Reviews() {
               className="w-10 h-10 border border-slate-200 rounded-full flex items-center justify-center hover:bg-slate-100 hover:border-slate-300 transition-all disabled:opacity-30"
               disabled={pos === 0}
             >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15.75 19.5L8.25 12l7.5-7.5"
-                />
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
               </svg>
             </button>
             <button
@@ -85,79 +98,39 @@ export default function Reviews() {
               className="w-10 h-10 border border-slate-200 rounded-full flex items-center justify-center hover:bg-slate-100 hover:border-slate-300 transition-all disabled:opacity-30"
               disabled={pos === reviews.length - 1}
             >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                />
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
               </svg>
             </button>
           </div>
         </div>
 
-        <div className="relative overflow-hidden">
+        {/* Mobile: horizontal scroll with snap */}
+        <div
+          ref={scrollRef}
+          className="sm:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4 px-4 pb-2"
+        >
+          {reviews.map((review, i) => (
+            <div key={i} className="w-[80vw] flex-shrink-0">
+              <ReviewCard review={review} />
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: button-controlled carousel */}
+        <div className="hidden sm:block relative overflow-hidden">
           <div
             className="flex gap-6 transition-transform duration-500 ease-out"
             style={{
-              transform: `translateX(-${pos * (100 / reviews.length)}%)`,
-              width: `${reviews.length * 340 + (reviews.length - 1) * 24}px`,
+              transform: `translateX(-${pos * 404}px)`,
             }}
           >
             {reviews.map((review, i) => (
-              <div
-                key={i}
-                className="card-elevated bg-white rounded-2xl p-8 min-w-[320px] sm:min-w-[380px] flex-shrink-0 border border-slate-100"
-              >
-                <Stars />
-                <h4 className="text-xl font-semibold text-slate-900 leading-snug mt-4 mb-3">
-                  &ldquo;{review.quote}&rdquo;
-                </h4>
-                <p className="text-slate-500 text-sm leading-relaxed mb-5">
-                  {review.body}
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 text-sm font-bold">
-                    {review.name.charAt(0)}
-                  </div>
-                  <span className="text-sm font-medium text-slate-700">
-                    {review.name}
-                  </span>
-                </div>
+              <div key={i} className="w-[380px] flex-shrink-0">
+                <ReviewCard review={review} />
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Mobile nav */}
-        <div className="flex sm:hidden items-center justify-center gap-3 mt-6">
-          <button
-            onClick={() => setPos(Math.max(0, pos - 1))}
-            className="w-10 h-10 border border-slate-200 rounded-full flex items-center justify-center"
-            disabled={pos === 0}
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-            </svg>
-          </button>
-          <span className="text-sm text-slate-400">
-            {pos + 1} / {reviews.length}
-          </span>
-          <button
-            onClick={() => setPos(Math.min(reviews.length - 1, pos + 1))}
-            className="w-10 h-10 border border-slate-200 rounded-full flex items-center justify-center"
-            disabled={pos === reviews.length - 1}
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-          </button>
         </div>
       </div>
     </section>

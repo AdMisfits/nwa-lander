@@ -12,14 +12,14 @@ export default function QuizCta() {
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-navy-950/90 via-navy-900/80 to-transparent" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-28">
         <div className="max-w-xl">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6 border border-white/10">
             <span className="text-white/80 text-sm font-medium">
               2-minute quiz
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight mb-4">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight mb-4">
             Find the right system for your home
           </h2>
           <p className="text-slate-300 text-lg leading-relaxed mb-8">
