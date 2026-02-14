@@ -1,0 +1,67 @@
+/* ============================================================
+   NWA Location Landing Page — Custom Styles
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Navbar ---- */
+#navbar {
+  transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+#navbar.nav-scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* ---- FAQ Accordion ---- */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding-bottom 0.35s ease;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.faq-item.open .faq-answer {
+  max-height: 500px;
+  padding-bottom: 20px;
+}
+.faq-chevron {
+  transition: transform 0.25s ease;
+}
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+/* ---- Scroll Fade-up Animations ---- */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Form focus styles ---- */
+input:focus,
+select:focus {
+  border-color: #2563EB;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* ---- Selection color ---- */
+::selection {
+  background: rgba(37, 99, 235, 0.15);
+  color: inherit;
+}
