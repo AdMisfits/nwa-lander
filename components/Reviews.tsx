@@ -50,10 +50,10 @@ export default function Reviews() {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-end justify-between mb-12">
           <div>
-            <p className="text-brand-600 text-sm font-semibold tracking-wider uppercase mb-3">
+            <p className="text-brand-600 text-sm font-medium tracking-wider uppercase mb-3">
               Testimonials
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-900">
               Ratings &amp; reviews
             </h2>
           </div>

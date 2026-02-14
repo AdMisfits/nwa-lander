@@ -28,10 +28,10 @@ export default function Promotions() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <p className="text-brand-200 text-sm font-semibold tracking-wider uppercase mb-3">
+          <p className="text-brand-200 text-sm font-medium tracking-wider uppercase mb-3">
             Limited-Time Offers
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight">
             Exclusive promotions in {LOCATION.city}
           </h2>
         </div>
@@ -57,7 +57,7 @@ export default function Promotions() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2 leading-tight">
+              <h3 className="text-xl font-semibold text-slate-900 mb-2 leading-tight">
                 {offer.title}
               </h3>
               <p className="text-slate-500 text-sm leading-relaxed mb-5">
@@ -65,7 +65,7 @@ export default function Promotions() {
               </p>
               <a
                 href="#contact"
-                className="text-brand-600 text-sm font-semibold inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all"
+                className="text-brand-600 text-sm font-medium inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all"
               >
                 Redeem offer
                 <svg

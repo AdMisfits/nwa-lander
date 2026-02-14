@@ -37,10 +37,10 @@ export default function Faq() {
     <section id="faq" className="bg-white py-20 sm:py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-14">
-          <p className="text-brand-600 text-sm font-semibold tracking-wider uppercase mb-3">
+          <p className="text-brand-600 text-sm font-medium tracking-wider uppercase mb-3">
             FAQ
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-900">
             Frequently asked questions
           </h2>
         </div>

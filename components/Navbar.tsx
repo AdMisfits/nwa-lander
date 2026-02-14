@@ -63,7 +63,7 @@ export default function Navbar() {
                   />
                 </svg>
               </div>
-              <span className="text-lg font-bold text-slate-900 tracking-tight">
+              <span className="text-lg font-semibold text-slate-900 tracking-tight">
                 NWA
               </span>
             </a>
@@ -117,7 +117,7 @@ export default function Navbar() {
               </a>
               <a
                 href="#contact"
-                className="bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all hover:shadow-lg hover:shadow-brand-600/25"
+                className="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-all hover:shadow-lg hover:shadow-brand-600/25"
               >
                 Get Free Quote
               </a>

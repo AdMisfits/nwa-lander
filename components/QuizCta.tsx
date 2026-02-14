@@ -19,7 +19,7 @@ export default function QuizCta() {
               2-minute quiz
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight mb-4">
             Find the right system for your home
           </h2>
           <p className="text-slate-300 text-lg leading-relaxed mb-8">
@@ -29,7 +29,7 @@ export default function QuizCta() {
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 bg-white text-slate-900 text-base font-semibold px-7 py-3.5 rounded-full hover:bg-slate-100 transition-all hover:shadow-lg"
+            className="inline-flex items-center gap-2 bg-white text-slate-900 text-base font-medium px-7 py-3.5 rounded-full hover:bg-slate-100 transition-all hover:shadow-lg"
           >
             Take the quiz
             <svg

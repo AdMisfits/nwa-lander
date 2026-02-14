@@ -28,7 +28,7 @@ export default function Footer() {
                   />
                 </svg>
               </div>
-              <span className="text-base font-bold text-white tracking-tight">
+              <span className="text-base font-semibold text-white tracking-tight">
                 National Water Alliance
               </span>
             </div>

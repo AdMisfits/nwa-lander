@@ -28,10 +28,10 @@ export default function Products() {
     <section id="services" className="bg-slate-50 pattern-bg py-20 sm:py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
-          <p className="text-brand-600 text-sm font-semibold tracking-wider uppercase mb-3">
+          <p className="text-brand-600 text-sm font-medium tracking-wider uppercase mb-3">
             Our Solutions
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-900 leading-tight">
             Products &amp; services in {LOCATION.city}
           </h2>
         </div>
@@ -56,7 +56,7 @@ export default function Products() {
                   <p className="text-slate-500 text-sm leading-relaxed mb-3">
                     {product.desc}
                   </p>
-                  <span className="text-brand-600 text-sm font-semibold inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                  <span className="text-brand-600 text-sm font-medium inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
                     View products
                     <svg
                       className="w-4 h-4"

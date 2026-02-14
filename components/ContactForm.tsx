@@ -32,10 +32,10 @@ export default function ContactForm() {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-5 gap-16">
           <div className="lg:col-span-2">
-            <p className="text-brand-600 text-sm font-semibold tracking-wider uppercase mb-3">
+            <p className="text-brand-600 text-sm font-medium tracking-wider uppercase mb-3">
               Get Started
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 leading-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl font-normal text-slate-900 leading-tight mb-4">
               Schedule your free water consultation
             </h2>
             <p className="text-slate-500 text-base leading-relaxed mb-6">
@@ -231,7 +231,7 @@ export default function ContactForm() {
                   </div>
                   <button
                     type="submit"
-                    className="bg-slate-900 hover:bg-slate-800 text-white text-base font-semibold px-8 py-3.5 rounded-full transition-all hover:shadow-lg mt-2"
+                    className="bg-slate-900 hover:bg-slate-800 text-white text-base font-medium px-8 py-3.5 rounded-full transition-all hover:shadow-lg mt-2"
                   >
                     Next: Choose date &amp; time
                   </button>
@@ -254,7 +254,7 @@ export default function ContactForm() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                <h3 className="text-2xl font-semibold text-slate-900 mb-2">
                   You&apos;re all set!
                 </h3>
                 <p className="text-slate-500 text-sm max-w-sm mx-auto">

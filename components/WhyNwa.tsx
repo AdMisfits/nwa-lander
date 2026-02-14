@@ -44,10 +44,10 @@ export default function WhyNwa() {
     <section className="bg-white py-20 sm:py-28 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-brand-600 text-sm font-semibold tracking-wider uppercase mb-3">
+          <p className="text-brand-600 text-sm font-medium tracking-wider uppercase mb-3">
             Why NWA
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-900 leading-tight mb-4">
             Why families choose NWA
           </h2>
           <p className="text-slate-500 text-lg max-w-2xl mx-auto">
